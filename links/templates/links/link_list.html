@@ -7,5 +7,6 @@
 </head>
 <body>
     <p>Hola desde link_list.html</p>
+    <div>{% for link in links %}<a href="{{ link.url }}">{{ link.text }}</a> {% endfor %}</div>
 </body>
 </html>
