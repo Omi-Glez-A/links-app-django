@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Link list</title>
-</head>
-<body>
-    <p>Hola desde link_list.html</p>
+{% extends 'links/base.html' %}
+
+{% block content %}
+    <p class="title">Hola desde link_list.html</p>
     <div>{% for link in links %}<a href="{{ link.url }}">{{ link.text }}</a> {% endfor %}</div>
-</body>
-</html>
+{% endblock content %}
