@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from embed_video.fields import EmbedVideoField
 
 
 class Link(models.Model):
@@ -14,3 +15,6 @@ class Link(models.Model):
     # el tipo de dato indicado en la -> En este caso devuelve una string
     def __str__(self) -> str:
         return f"{self.text} | {self.url}"
+
+class Video(models.Model):
+    video = EmbedVideoField(blank=True)  #lo mismo que URLField()
