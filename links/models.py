@@ -17,4 +17,4 @@ class Link(models.Model):
         return f"{self.text} | {self.url}"
 
 class Video(models.Model):
-    video = EmbedVideoField(blank=True)  #lo mismo que URLField()
+    video = EmbedVideoField(null=True, blank=True)  #lo mismo que URLField()

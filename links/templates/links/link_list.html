@@ -1,11 +1,12 @@
-{% extends 'links/base.html' %}
+{% extends 'links/base.html' %}{% load embed_video_tags %}
 
 {% block content %}
 <p class="title">Hola desde link_list.html</p>
 
 <div class="section embeded-video">
-    
+{% video video.video 'medium' %}
 </div>
+
 {% for link in links %}
 <div class="section link-item"><a href="{{ link.url }}">{{ link.text }}</a></div>
 {% endfor %}
